@@ -59,6 +59,34 @@
     transform: scale(1.2);
   }
 }
+@keyframes infinityScrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes wink {
+  0% {
+    transform: scaleY(1);
+  }
+  1% {
+    transform: scaleY(0.1);
+  }
+  2% {
+    transform: scaleY(1);
+  }
+  3% {
+    transform: scaleY(0.1);
+  }
+  4% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -259,7 +287,7 @@ tab
 }
 
 .collectionTop_in {
-  background: #1a2849;
+  background: linear-gradient(#1a2849, #2c4277);
   width: 100%;
   height: 100%;
   border-radius: 1%;
@@ -279,35 +307,80 @@ tab
   font-size: 2em;
 }
 
-.collectionTop_star {
+.collectionTop_star div {
   position: absolute;
   background: #ffeb13;
   -webkit-clip-path: polygon(50% 0%, 68% 29%, 98% 35%, 80% 65%, 78% 92%, 50% 74%, 21% 91%, 24% 61%, 2% 35%, 32% 29%);
           clip-path: polygon(50% 0%, 68% 29%, 98% 35%, 80% 65%, 78% 92%, 50% 74%, 21% 91%, 24% 61%, 2% 35%, 32% 29%);
 }
-.collectionTop_star:nth-child(1) {
+.collectionTop_star div:nth-child(1) {
   top: 2%;
   left: 2%;
   width: 3em;
   height: 3em;
   animation: flotItem 1s infinite alternate;
 }
-.collectionTop_star:nth-child(2) {
+.collectionTop_star div:nth-child(2) {
   top: 7%;
   left: 4%;
   width: 4em;
   height: 4em;
   animation: flotItem 1.2s infinite alternate;
 }
-.collectionTop_star:nth-child(3) {
+.collectionTop_star div:nth-child(3) {
   top: 4%;
   left: 9%;
   width: 2em;
   height: 2em;
   animation: flotItem 1s 0.2s infinite alternate;
 }
-.collectionTop_star:nth-child(4) {
+.collectionTop_star div:nth-child(4) {
   width: 5em;
   height: 5em;
   animation: shootingstar 10s infinite;
+}
+
+.collectionTop_town {
+  display: flex;
+  overflow: hidden;
+  width: 200vw;
+  background-position: 0 0;
+  height: 30vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.collectionTop_town div {
+  width: 100vw;
+  height: 100%;
+  animation: infinityScrollLeft 60s infinite linear;
+  background: url(/images/town.svg) left bottom/cover no-repeat;
+}
+
+.collectionTop_moon {
+  width: 10em;
+  height: 10em;
+  background: #ffeb13;
+  border-radius: 100vh;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+.collectionTop_moon div {
+  content: "";
+  position: absolute;
+  top: 10%;
+  background: #2c4277;
+  width: 1em;
+  height: 2em;
+  border-radius: 100vh;
+  animation: wink 10s infinite;
+  transition: 0.3s;
+  margin-left: 0%;
+}
+.collectionTop_moon div:nth-child(1) {
+  left: 30%;
+}
+.collectionTop_moon div:nth-child(2) {
+  left: 60%;
 }/*# sourceMappingURL=style.css.map */

@@ -3,10 +3,10 @@ $(function () {
     const animatedCls = 'is-animated';
     $(window).on('scroll', function () {
         $(`.js-animationPoint:not(.${animatedCls})`).each(function () {
-let elementTop = $(this).offset().top;
-if (elementTop === 0) {
-    elementTop = 999999;
-}
+            let elementTop = $(this).offset().top;
+            if (elementTop === 0) {
+                elementTop = 999999;
+            }
 
             const windowHeight = $(window).height();
             const scrollTop = $(window).scrollTop();
@@ -51,4 +51,14 @@ if (elementTop === 0) {
         $(this).toggleClass("is-open");
     });
 
+
+    // document.addEventListener("mousemove", (event) => {
+    //     const cursorX = event.clientX;
+    //     const elements = document.querySelectorAll(".collectionTop_moon div"); // すべてのdiv要素を取得
+    //     const percentage = -(cursorX * 0.01); // 負のパーセントを計算
+    
+    //     elements.forEach((element) => {
+    //         element.style.marginLeft = `${percentage}%`; // 各divにスタイルを適用
+    //     });
+    // });
 });
