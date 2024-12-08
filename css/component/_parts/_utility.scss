@@ -1,0 +1,37 @@
+@use '../../valiable/index' as *;
+
+.inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.group {
+
+    + .group {
+        margin-top: 100px;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 60px;
+        }
+    }
+}
+
+
+@for $i from 1 through 10 {
+    .space#{$i}0vh {
+        background: #333;
+        color: #fff;
+        line-height: #{$i}0vh;
+        text-align: center;
+    
+        &::before {
+            content: 'space';
+        }
+    }
+}
+
+.scrollPoint {
+    position: fixed;
+    right: 0;
+    top: 50%;
+}

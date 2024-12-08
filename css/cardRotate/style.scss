@@ -1,0 +1,96 @@
+@use '../valiable/index' as *;
+@use '../component/index' as *;
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
+
+.header_text {
+
+    dt {
+        display: inline-block;
+        min-width: 10em;
+        border-bottom: 1px solid #fff;
+        font-weight: bold;
+    }
+
+    dd {
+        padding: 1em .5em;
+    }
+}
+
+.cardRotateMv {
+    @include secPadding();
+    background: #28197c;
+
+    img {
+        opacity: 0;
+        animation: rotateX 1s forwards;
+    }
+}
+
+.cardRotateDelay {
+    @include secPadding();
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+
+        li {
+            opacity: 0;
+        }
+
+        &.is-animated {
+            
+            li {
+                animation: rotateY 1s forwards;
+    
+                @for $i from 1 through 6 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: (0.2s * $i);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.cardRotateOrijin {
+    @include secPadding();
+    background: #eee;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+
+        li {
+            opacity: 0;
+        }
+
+        &.is-animated {
+
+            li {
+
+                &.item {
+                    animation: rotateX .5s forwards;
+                }
+
+                &.between {
+                    animation: rotateZ_isSpinIn 1s forwards .5s;
+                }
+            }
+        }
+    }
+}

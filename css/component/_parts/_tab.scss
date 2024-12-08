@@ -1,0 +1,47 @@
+@use '../../valiable/index' as *;
+
+/* ===================================================================
+tab
+=================================================================== */
+.tabLists {
+    font-size: 1.5em;
+
+    .inner {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0.2em;
+    }
+}
+
+
+.tabLists_tab {
+    background: #ccc;
+    color: #333;
+    width: 100%;
+    padding: 1em;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 0.2em;
+
+    &.is-active {
+        padding: 1.1em;
+        margin-top: 0em;
+        background: #333;
+        color: #fff;
+    }
+}
+
+
+.tabContent {
+    display: none;
+    border: .5em solid #333;
+
+    &.is-active {
+        display: block;
+    }
+}

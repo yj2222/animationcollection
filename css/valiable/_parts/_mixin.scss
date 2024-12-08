@@ -1,0 +1,8 @@
+@mixin secPadding() {
+    padding: 60px 10px;
+
+    @media screen and (max-width: 768px) {
+        padding: 40px 10px;
+    }
+}
+

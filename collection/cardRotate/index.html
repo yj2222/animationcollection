@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation collection</title>
+    <link rel="stylesheet" href="/css/cardRotate/style.css">
+</head>
+
+<body>
+
+    <div class="scrollPoint">
+        -------- triggerPoint
+    </div>
+
+    <header>
+        <div class="inner">
+            <h1>HTML/CSS animation sample</h1>
+            <div class="header_text">
+                <dl>
+                    <dt>概要</dt>
+                    <dd>アイテムを回転させるアニメーション</dd>
+                    <dt>ポイント</dt>
+                    <dd>
+                        <p>スクロールイベントとタブイベントが競合を解消した</p>
+                        <a href="https://qiita.com/YJ2222/private/b8cf93648647b56ce684" target="_blank">> 詳しくはQiitaにまとめてます</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="group">
+            <div class="cardRotateMv">
+                <div class="inner">
+                    <img src="https://placehold.jp/3d4070/ffffff/1000x600.png?text=no%20image" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="js-tabParentBlock" id="sec01">
+                <div class="tabLists">
+                    <div class="inner">
+                        <div class="tabLists_tab is-active" data-tab="tab1">
+                            <p>タブ１</p>
+                        </div>
+                        <div class="tabLists_tab" data-tab="tab2">
+                            <p>タブ２</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabContent is-active" data-tab="tab1">
+                    <div class="cardRotateDelay">
+                        <div class="inner">
+                            <ul class="js-animationPoint" id="sec01-tab1">
+                                <li>
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                            </ul>
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="tabContent" data-tab="tab2">
+                    <div class="cardRotateDelay">
+                        <div class="inner">
+                            <div class="group">
+                                <div class="space100vh"></div>
+                            </div>
+
+                            <div class="group">
+                                <ul class="js-animationPoint" id="sec01-tab2">
+                                    <li>
+                                        <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="group">
+            <div class="js-tabParentBlock" id="sec02">
+                <div class="tabLists">
+                    <div class="inner">
+                        <div class="tabLists_tab is-active" data-tab="tab1">
+                            <p>タブ１</p>
+                        </div>
+                        <div class="tabLists_tab" data-tab="tab2">
+                            <p>タブ２</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabContent is-1g is-active" data-tab="tab1">
+                    <div class="cardRotateOrijin">
+                        <div class="inner">
+                            <ul class="js-animationPoint" id="sec02-tab1">
+                                <li class="item">
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                                <li class="between">
+                                    <img src="https://placehold.jp/a9971e/ffffff/200x200.png?text=no%20image" alt="">
+                                </li>
+                                <li class="item">
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabContent is-10g" data-tab="tab2">
+                    <div class="cardRotateOrijin">
+                        <div class="inner">
+                            <ul class="js-animationPoint" id="sec02-tab2">
+                                <li class="item">
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                                <li class="between">
+                                    <img src="https://placehold.jp/a9971e/ffffff/200x200.png?text=no%20image" alt="">
+                                </li>
+                                <li class="item">
+                                    <img src="https://placehold.jp/3d4070/ffffff/400x300.png?text=no%20image" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="space50vh"></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

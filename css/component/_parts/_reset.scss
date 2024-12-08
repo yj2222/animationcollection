@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: Hiragino Kaku Gothic Pro, Meiryo, Osaka, MS PGothic, sans-serif;
+}
+
+ul,li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+a {
+    color: inherit;
+}
