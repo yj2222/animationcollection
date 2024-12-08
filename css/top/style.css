@@ -1,3 +1,5 @@
+
+
 @keyframes rotateY {
   0% {
     opacity: 0;
@@ -354,7 +356,7 @@ tab
   width: 100vw;
   height: 100%;
   animation: infinityScrollLeft 60s infinite linear;
-  background: url(/images/town.svg) left bottom/cover no-repeat;
+  background: url(../images/town.svg) left bottom/cover no-repeat;
 }
 
 .collectionTop_moon {
