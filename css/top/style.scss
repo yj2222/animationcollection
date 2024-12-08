@@ -1,0 +1,72 @@
+@use '../valiable/index' as *;
+@use '../component/index' as *;
+
+.collectionTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background: #492410;
+}
+
+.collectionTop_in {
+    background: #1a2849;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    position: relative;
+    overflow: hidden;
+
+    .inner {
+        height: 100%;
+    }
+}
+
+.collectionTop_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    font-size: 2em;
+}
+
+.collectionTop_star {
+    position: absolute;
+    background: #ffeb13;
+    clip-path: polygon(50% 0%, 68% 29%, 98% 35%, 80% 65%, 78% 92%, 50% 74%, 21% 91%, 24% 61%, 2% 35%, 32% 29%);
+
+
+    &:nth-child(1) {
+        top: 2%;
+        left: 2%;
+        width: 3em;
+        height: 3em;    
+        animation: flotItem 1s infinite alternate;
+    }
+
+    &:nth-child(2) {
+        top: 7%;
+        left: 4%;
+        width: 4em;
+        height: 4em;    
+        animation: flotItem 1.2s infinite alternate;
+    }
+
+    &:nth-child(3) {
+        top: 4%;
+        left: 9%;
+        width: 2em;
+        height: 2em;    
+        animation: flotItem 1s .2s infinite alternate;
+    }
+
+    &:nth-child(4) {
+        width: 5em;
+        height: 5em;    
+        animation: shootingstar 10s infinite;
+    }
+    
+}
